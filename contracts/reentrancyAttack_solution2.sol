@@ -15,7 +15,7 @@ contract Bank {
     }
 
     function withdraw() external {
-        require(isEntering==false, "ERROR : noreentrant");
+        require(isEntering==false, "ERROR : nonReentrant");
         isEntering = true; //바로 true값으로 바꿔주지 않으면 무용지물
         uint currentBalance = balances[msg.sender]; 
         balances[msg.sender] = 0;  
