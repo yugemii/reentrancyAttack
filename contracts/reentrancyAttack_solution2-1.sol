@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.0;
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol";
 
-contract Bank {
+contract Bank is ReentrancyGuard {
     
     mapping(address => uint) public balances;
+    bool internal isEntering; // 초기값 false
 
     constructor() payable {
         //배포 시 이더 송금 가능
@@ -13,7 +15,8 @@ contract Bank {
         balances[msg.sender] += msg.value;
     }
 
-    function withdraw() external {
+    //function withdraw() external nonReentrant()
+    function withdraw() external nonReentrant() {
         uint currentBalance = balances[msg.sender]; 
         balances[msg.sender] = 0;  
         (bool result,) = msg.sender.call{value:currentBalance}("");
@@ -24,6 +27,12 @@ contract Bank {
         return address(this).balance;
     }
     
+    /*modifier nonReentrant() {
+        require(!isEntering, "ERROR : nonReentrant");
+        isEntering = true; //바로 true값으로 바꿔주지 않으면 무용지물
+        _;
+        isEntering = false;
+    }*/
 }
 
 contract Attacker {

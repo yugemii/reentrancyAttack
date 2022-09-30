@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -65,7 +70,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/reentrancyAttack_solution1.sol": "Bank"
+			"contracts/reentrancyAttack_solution2-1.sol": "Bank"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -79,12 +84,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/reentrancyAttack_solution1.sol": {
-			"keccak256": "0xda18e51923ece617758cae4418d05db7f1537efd4bbb1e4b43c5c678b41565b2",
+		"contracts/reentrancyAttack_solution2-1.sol": {
+			"keccak256": "0x84fdc4810173d6724a0197a81aada8963e1ee61a3a9853e032281e97295b8023",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://0a0967244070ef1c12cb6fc73ecf32257d656c89b82a8653f20f450a4880dee4",
-				"dweb:/ipfs/QmTfZZw1haNcDbUpYUf5GHLCUTkaJz3X9YiaPK8bF3EQp4"
+				"bzz-raw://4bf25ba96761b25e6d6fa922786ee380b9b25cee579ca69a1cbcbf93d8760bb7",
+				"dweb:/ipfs/QmPdsnS98yJWJw3QynauWwvr5RK5RgJYVCfobfDstofbAe"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol": {
+			"keccak256": "0xcb1daab663523cdea8f1f68841308c27a13a6ad262f4e14e893dbb7eda080414",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5b8b9cda74c444b67ffdf189b727d395b3eda1dc7159b496ac6ae7e726b4ed1c",
+				"dweb:/ipfs/QmbL8AgGK4idVwtBSaxnpfs6ihVTQ61jEiW43WSyNNjNmb"
 			]
 		}
 	},

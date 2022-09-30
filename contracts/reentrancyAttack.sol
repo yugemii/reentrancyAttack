@@ -5,6 +5,9 @@ contract Bank {
     
     mapping(address => uint) public balances;
 
+    constructor() payable {
+        //배포 시 이더 송금 가능
+    }
 
     function deposit() external payable {
         balances[msg.sender] += msg.value;
