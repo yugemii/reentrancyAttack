@@ -11,12 +11,10 @@ contract Bank {
     }
 
     function withdraw() external {
-
         uint currentBalance = balances[msg.sender]; 
+        balances[msg.sender] = 0;  
         (bool result,) = msg.sender.call{value:currentBalance}("");
         require(result, "ERROR");
-        balances[msg.sender] = 0;     
-
     }
     
     function chekcBalance() external view returns(uint) {

@@ -65,7 +65,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/reentrancyAttack.sol": "Bank"
+			"contracts/reentrancyAttack_solution1.sol": "Bank"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -79,12 +79,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/reentrancyAttack.sol": {
-			"keccak256": "0x65ad5c4d8e81b808d1c98019be990ec953cd076e187e5d5c3354b5f0a543f84a",
+		"contracts/reentrancyAttack_solution1.sol": {
+			"keccak256": "0xda18e51923ece617758cae4418d05db7f1537efd4bbb1e4b43c5c678b41565b2",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a18bccb2e92c479051f795bba4e11d9ac55679fe20f1c18236e3e5811e38837a",
-				"dweb:/ipfs/QmTTEm1SPQtxPzPx21aiMdMLP7T7tAbMinbGJBpD6dr2NW"
+				"bzz-raw://0a0967244070ef1c12cb6fc73ecf32257d656c89b82a8653f20f450a4880dee4",
+				"dweb:/ipfs/QmTfZZw1haNcDbUpYUf5GHLCUTkaJz3X9YiaPK8bF3EQp4"
 			]
 		}
 	},
